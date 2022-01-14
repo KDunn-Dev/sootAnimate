@@ -4,13 +4,13 @@ const ASSET_MANAGER = new AssetManager();
 
 ASSET_MANAGER.queueDownload("./sprites/soot-jump-long.png");
 ASSET_MANAGER.queueDownload("./sprites/soot-jump-long_aura.png");
-ASSET_MANAGER.queueDownload("./sprites/soot-jump-long_aura2.png");
+ASSET_MANAGER.queueDownload("./sprites/soot-jump-long_aura2_bidir.png");
 
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
 
-	//ctx.imageSmoothingEnabled = false;
+	ctx.imageSmoothingEnabled = false;
 
 	gameEngine.init(ctx);
 
